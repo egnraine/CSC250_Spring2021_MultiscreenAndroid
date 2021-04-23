@@ -15,9 +15,9 @@ public class Screen3 extends AppCompatActivity
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_screen3);
 
-        TextView nameTV = this.findViewById(R.id.nameTV);
-        //Intent myIntent = this.getIntent();
-        //String name = myIntent.getStringExtra("name");
-        nameTV.setText(MySingleton.name + ": " + MySingleton.counter);
+        TextView nameTV = this.findViewById(R.id.answerTV);
+        Intent myIntent = this.getIntent();
+        String value = myIntent.getStringExtra("value");
+        nameTV.setText(value);
     }
 }

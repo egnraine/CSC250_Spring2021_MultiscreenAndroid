@@ -9,7 +9,7 @@ import android.widget.TextView;
 
 public class Screen2 extends AppCompatActivity
 {
-    private String name;
+    private String value;
 
     @Override
     protected void onCreate(Bundle savedInstanceState)
@@ -17,31 +17,34 @@ public class Screen2 extends AppCompatActivity
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_screen2);
 
-        TextView nameTV = this.findViewById(R.id.nameTV);
-        //Intent myIntent = this.getIntent();
-        //this.name = myIntent.getStringExtra("name");
-        //int counter = myIntent.getIntExtra("counter", -1);
-        nameTV.setText(MySingleton.name + ": " + MySingleton.counter);
+        TextView nameTV = this.findViewById(R.id.answerTV);
+        Intent myIntent = this.getIntent();
+        this.value = myIntent.getStringExtra("value");
+        nameTV.setText(value);
     }
 
-    @Override
-    protected void onPause()
+    private String squareRoot(double n)
     {
-        super.onPause();
-
+        double answer;
+        answer = Math.sqrt(n);
+        String answerStr = "" + answer;
+        return answerStr;
     }
 
+    /*
     @Override
     protected void onStop() {
         super.onStop();
         TextView nameTV = this.findViewById(R.id.nameTV);
         nameTV.setText("WOOT");
     }
+    */
 
     public void onNextScreenButtonPressed(View v)
     {
         Intent i = new Intent(this, Screen3.class);
-        //i.putExtra("name", this.name);
+        String current = squareRoot(Integer.parseInt(value));
+        i.putExtra("answer", current);
         this.startActivity(i);
     }
 }

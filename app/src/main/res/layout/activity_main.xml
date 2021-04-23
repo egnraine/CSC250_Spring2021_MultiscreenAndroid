@@ -7,16 +7,18 @@
     android:orientation="vertical"
     tools:context=".MainActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
+    <EditText
+        android:id="@+id/inputET"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Hello World!" />
+        android:ems="10"
+        android:inputType="numberDecimal" />
 
     <Button
         android:id="@+id/button"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:onClick="onNextScreenButtonClicked"
-        android:text="Goto Screen 2" />
+        android:onClick="onFactorialButtonClicked"
+        android:text="Factorial" />
 
 </LinearLayout>

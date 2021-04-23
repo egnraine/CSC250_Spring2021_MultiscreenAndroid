@@ -8,7 +8,7 @@
     tools:context=".Screen3">
 
     <TextView
-        android:id="@+id/nameTV"
+        android:id="@+id/answerTV"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="TextView"

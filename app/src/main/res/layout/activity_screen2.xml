@@ -8,16 +8,17 @@
     tools:context=".Screen2">
 
     <TextView
-        android:id="@+id/nameTV"
+        android:id="@+id/answerTV"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Screen 2"
+        android:gravity="center"
+        android:text="Answer"
         android:textSize="36sp" />
 
     <Button
-        android:id="@+id/button2"
+        android:id="@+id/SquareRoot"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:onClick="onNextScreenButtonPressed"
-        android:text="Goto Screen 3" />
+        android:text="Square Root" />
 </LinearLayout>
